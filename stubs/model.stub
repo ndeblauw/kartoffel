@@ -1,0 +1,14 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\Scopes\TenantScope;
+use Illuminate\Database\Eloquent\Attributes\ScopedBy;
+{{ factoryImport }}
+use Illuminate\Database\Eloquent\Model;
+
+#[ScopedBy([TenantScope::class])]
+class {{ class }} extends Model
+{
+    {{ factory }}
+}
